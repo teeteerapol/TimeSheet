@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D4D27801-62B4-45DD-B90B-3E9945A7B603}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Parking</RootNamespace>
+    <AssemblyName>Parking</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>car_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CarDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Engine\AccessOleDbProvider.cs" />
+    <Compile Include="Forms\Bases\BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bases\BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Bases\frmEntryBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Bases\frmEntryBase.Designer.cs">
+      <DependentUpon>frmEntryBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Reports\frmRptBetween.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Reports\frmRptBetween.Designer.cs">
+      <DependentUpon>frmRptBetween.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transection\frmBrowseCarContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transection\frmBrowseCarContact.Designer.cs">
+      <DependentUpon>frmBrowseCarContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transection\frmCarIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transection\frmCarIn.Designer.cs">
+      <DependentUpon>frmCarIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transection\frmCarOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transection\frmCarOut.Designer.cs">
+      <DependentUpon>frmCarOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Transection\frmDetailCarContact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Transection\frmDetailCarContact.Designer.cs">
+      <DependentUpon>frmDetailCarContact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTestCamera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTestCamera.Designer.cs">
+      <DependentUpon>frmTestCamera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Bases\BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Bases\frmEntryBase.resx">
+      <DependentUpon>frmEntryBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Reports\frmRptBetween.resx">
+      <DependentUpon>frmRptBetween.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transection\frmBrowseCarContact.resx">
+      <DependentUpon>frmBrowseCarContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transection\frmCarIn.resx">
+      <DependentUpon>frmCarIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transection\frmCarOut.resx">
+      <DependentUpon>frmCarOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Transection\frmDetailCarContact.resx">
+      <DependentUpon>frmDetailCarContact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTestCamera.resx">
+      <DependentUpon>frmTestCamera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\RptDetail.rdlc" />
+    <EmbeddedResource Include="Reports\RptMain.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="CarDataSet.xsc">
+      <DependentUpon>CarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CarDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CarDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CarDataSet.xss">
+      <DependentUpon>CarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\CarDataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Camera.Class\Camera.Class.csproj">
+      <Project>{119dde4b-017d-47f7-8a41-48921415e2c7}</Project>
+      <Name>Camera.Class</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="car_icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
